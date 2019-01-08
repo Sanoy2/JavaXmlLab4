@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ComputerEngineering>
+    <Course Author="Krzysztof Tomków" Name="Application programming - Java and XML technologies">
+        <Topics>Sample topic here</Topics>
+        <Topics>Another topic here</Topics>
+    </Course>
+</ComputerEngineering>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE employees SYSTEM "DataDTD.dtd">
+<employees>
+    <employee id="e1">
+        <name>
+            <additionalName>Jack</additionalName>
+            <lastName>Doe</lastName>
+        </name>
+        <address>
+            <city>New York</city>
+            <street>Foo Street</street>
+            <number>2</number>
+            <country>USA</country>
+        </address>
+        <contact>
+            <mobile>739283648</mobile>
+            <mobile>739205827</mobile>
+            <email>aaa@mail.com</email>
+            <email>bbb@mail.com</email>
+        </contact>
+        <job jobId="Architect"></job>
+    </employee>
+    <employee id="e2">
+        <name>
+            <firstName>Antionio</firstName>
+            <additionalName>Fernando</additionalName>
+            <additionalName>Ernesto</additionalName>
+            <lastName>Rivera</lastName>
+        </name>
+        <address>
+            <city>New York</city>
+            <street>Long Street</street>
+            <number>20</number>
+            <secondNumber>2</secondNumber>
+            <country>USA</country>
+        </address>
+        <contact>
+            <mobile>639782648</mobile>
+            <email>redhat@mail.com</email>
+        </contact>
+        <job jobId="Manager"></job>
+    </employee>
+    <employee id="e3">
+        <name>
+            <firstName>John</firstName>
+            <lastName>Smith</lastName>
+        </name>
+        <address>
+            <city>New York</city>
+            <street>Armored street</street>
+            <number>28</number>
+            <secondNumber>7A</secondNumber>
+            <country>USA</country>
+        </address>
+        <contact>
+            <mobile>611182678</mobile>
+            <email>myfirstemail@mail.com</email>
+            <email>anotheremail@mail.com</email>
+        </contact>
+        <job jobId="Physical"></job>
+    </employee>
+</employees>
+
+<!-- Author: Krzysztof Tomkow, index number: 218514 -->

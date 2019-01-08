@@ -1,0 +1,21 @@
+<!ELEMENT employees (employee)* >
+<!ELEMENT employee (name, address, contact, job)>
+<!ELEMENT name (firstName, additionalName*, lastName)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT additionalName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT address (city, street, number, secondNumber*, country)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT secondNumber (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT contact (mobile+, email+)>
+<!ELEMENT mobile (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT job EMPTY>
+
+<!ATTLIST employee id ID #REQUIRED>
+<!ATTLIST job jobId CDATA #REQUIRED> 
+
+<!-- Author: Krzysztof Tomkow, index number: 218514 -->
