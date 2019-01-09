@@ -1,22 +1,29 @@
 import org.w3c.dom.Document;
 import org.xml.sax.ErrorHandler;
-import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
-import java.io.IOException;
 
 public class XmlValidator
 {
     public static void ValidateAndPrintResult(String path)
     {
+        System.out.println("********************");
         System.out.println("Validating file: " + path);
-        if(Validate(path))
+
+        boolean valid = Validate(path);
+
+        if(valid)
         {
-            System.out.println("Data valid");
+            System.out.println(">>> Data valid <<<");
         }
+        else
+        {
+            System.out.println("!!! Data invalid !!!");
+        }
+        System.out.println("********************");
+
         System.out.println();
     }
 
@@ -29,22 +36,13 @@ public class XmlValidator
                     = DocumentBuilderFactory.newInstance();
             builderFactory.setValidating(true); // Default is false
             DocumentBuilder documentBuilder = builderFactory.newDocumentBuilder();
-            ErrorHandler errorHandler = new ValidationError();
+            ErrorHandler errorHandler = new ValidationErrorHandler();
+            ((ValidationErrorHandler) errorHandler).Reset();
             documentBuilder.setErrorHandler(errorHandler);
             Document doc = documentBuilder.parse(file);
-            return true;
+            return ((ValidationErrorHandler) errorHandler).WasValid();
         }
-        catch (ParserConfigurationException e)
-        {
-            System.out.println(e.toString());
-            return false;
-        }
-        catch (SAXException e)
-        {
-            System.out.println(e.toString());
-            return false;
-        }
-        catch (IOException e)
+        catch(Exception e)
         {
             System.out.println(e.toString());
             return false;

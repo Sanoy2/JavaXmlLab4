@@ -21,5 +21,6 @@ public class Main {
         XmlSaver.SaveXml("NewBook.xml", doc);
 
         System.out.println("Program finished");
+        System.out.println("Created by: Krzysztof Tomków");
     }
 }

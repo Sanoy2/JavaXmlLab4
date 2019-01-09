@@ -12,6 +12,7 @@ public class Main
         XmlValidator.ValidateAndPrintResult(IncorrectFilePath);
 
         System.out.println("Program finished");
+        System.out.println("Created by: Krzysztof Tomków");
     }
 
 

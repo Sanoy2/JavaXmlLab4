@@ -46,7 +46,6 @@
             <lastName>Smith</lastName>
         </name>
         <address>
-            <city>New York</city>
             <street>Armored street</street>
             <number>28</number>
             <secondNumber>7A</secondNumber>
